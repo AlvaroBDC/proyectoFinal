@@ -35,7 +35,7 @@
             this.menuReporte = new FontAwesome.Sharp.IconMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
-            this.Contenedor = new System.Windows.Forms.Panel();
+            this.contenedor = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,13 +129,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Sistema Institucion Educativa";
             // 
-            // Contenedor
+            // contenedor
             // 
-            this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Contenedor.Location = new System.Drawing.Point(0, 126);
-            this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(684, 335);
-            this.Contenedor.TabIndex = 0;
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(0, 126);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(684, 335);
+            this.contenedor.TabIndex = 3;
             // 
             // Inicio
             // 
@@ -143,7 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.Contenedor);
+            this.Controls.Add(this.contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
@@ -166,7 +166,7 @@
         private FontAwesome.Sharp.IconMenuItem menuNuevoUsuario;
         private FontAwesome.Sharp.IconMenuItem MenuPagos;
         private FontAwesome.Sharp.IconMenuItem MenuCuentas;
-        private System.Windows.Forms.Panel Contenedor;
+        private System.Windows.Forms.Panel contenedor;
     }
 }
 
