@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.MenuStrip();
+            this.menuNuevoUsuario = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuPagos = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuCuentas = new FontAwesome.Sharp.IconMenuItem();
+            this.menuReporte = new FontAwesome.Sharp.IconMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuReporte = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuCuentas = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuPagos = new FontAwesome.Sharp.IconMenuItem();
-            this.menuNuevoUsuario = new FontAwesome.Sharp.IconMenuItem();
+            this.Contenedor = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,9 +49,61 @@
             this.menuReporte});
             this.menu.Location = new System.Drawing.Point(0, 53);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(656, 73);
+            this.menu.Size = new System.Drawing.Size(684, 73);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
+            // 
+            // menuNuevoUsuario
+            // 
+            this.menuNuevoUsuario.AutoSize = false;
+            this.menuNuevoUsuario.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
+            this.menuNuevoUsuario.IconColor = System.Drawing.Color.Black;
+            this.menuNuevoUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuNuevoUsuario.IconSize = 50;
+            this.menuNuevoUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuNuevoUsuario.Name = "menuNuevoUsuario";
+            this.menuNuevoUsuario.Size = new System.Drawing.Size(122, 69);
+            this.menuNuevoUsuario.Text = "Nuevos Usuarios";
+            this.menuNuevoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // MenuPagos
+            // 
+            this.MenuPagos.AutoSize = false;
+            this.MenuPagos.IconChar = FontAwesome.Sharp.IconChar.Donate;
+            this.MenuPagos.IconColor = System.Drawing.Color.Black;
+            this.MenuPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuPagos.IconSize = 50;
+            this.MenuPagos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuPagos.Name = "MenuPagos";
+            this.MenuPagos.Size = new System.Drawing.Size(122, 69);
+            this.MenuPagos.Text = "Pagos";
+            this.MenuPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // MenuCuentas
+            // 
+            this.MenuCuentas.AutoSize = false;
+            this.MenuCuentas.IconChar = FontAwesome.Sharp.IconChar.UserGroup;
+            this.MenuCuentas.IconColor = System.Drawing.Color.Black;
+            this.MenuCuentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuCuentas.IconSize = 50;
+            this.MenuCuentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuCuentas.Name = "MenuCuentas";
+            this.MenuCuentas.Size = new System.Drawing.Size(122, 69);
+            this.MenuCuentas.Text = "Cuentas";
+            this.MenuCuentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuReporte
+            // 
+            this.menuReporte.AutoSize = false;
+            this.menuReporte.IconChar = FontAwesome.Sharp.IconChar.BarChart;
+            this.menuReporte.IconColor = System.Drawing.Color.Black;
+            this.menuReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuReporte.IconSize = 50;
+            this.menuReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuReporte.Name = "menuReporte";
+            this.menuReporte.Size = new System.Drawing.Size(122, 69);
+            this.menuReporte.Text = "Reporte";
+            this.menuReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // menuTitulo
             // 
@@ -59,7 +112,7 @@
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(656, 53);
+            this.menuTitulo.Size = new System.Drawing.Size(684, 53);
             this.menuTitulo.TabIndex = 1;
             this.menuTitulo.Text = "menuStrip2";
             // 
@@ -76,64 +129,21 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Sistema Institucion Educativa";
             // 
-            // menuReporte
+            // Contenedor
             // 
-            this.menuReporte.AutoSize = false;
-            this.menuReporte.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
-            this.menuReporte.IconColor = System.Drawing.Color.Black;
-            this.menuReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuReporte.IconSize = 50;
-            this.menuReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuReporte.Name = "menuReporte";
-            this.menuReporte.Size = new System.Drawing.Size(122, 69);
-            this.menuReporte.Text = "Reporte";
-            this.menuReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // MenuCuentas
-            // 
-            this.MenuCuentas.AutoSize = false;
-            this.MenuCuentas.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
-            this.MenuCuentas.IconColor = System.Drawing.Color.Black;
-            this.MenuCuentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuCuentas.IconSize = 50;
-            this.MenuCuentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuCuentas.Name = "MenuCuentas";
-            this.MenuCuentas.Size = new System.Drawing.Size(122, 69);
-            this.MenuCuentas.Text = "Cuentas";
-            this.MenuCuentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // MenuPagos
-            // 
-            this.MenuPagos.AutoSize = false;
-            this.MenuPagos.IconChar = FontAwesome.Sharp.IconChar.CircleDollarToSlot;
-            this.MenuPagos.IconColor = System.Drawing.Color.Black;
-            this.MenuPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuPagos.IconSize = 50;
-            this.MenuPagos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuPagos.Name = "MenuPagos";
-            this.MenuPagos.Size = new System.Drawing.Size(122, 69);
-            this.MenuPagos.Text = "Pagos";
-            this.MenuPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // menuNuevoUsuario
-            // 
-            this.menuNuevoUsuario.AutoSize = false;
-            this.menuNuevoUsuario.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
-            this.menuNuevoUsuario.IconColor = System.Drawing.Color.Black;
-            this.menuNuevoUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuNuevoUsuario.IconSize = 50;
-            this.menuNuevoUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuNuevoUsuario.Name = "menuNuevoUsuario";
-            this.menuNuevoUsuario.Size = new System.Drawing.Size(122, 69);
-            this.menuNuevoUsuario.Text = "Nuevos Usuarios";
-            this.menuNuevoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Contenedor.Location = new System.Drawing.Point(0, 126);
+            this.Contenedor.Name = "Contenedor";
+            this.Contenedor.Size = new System.Drawing.Size(684, 335);
+            this.Contenedor.TabIndex = 0;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(656, 335);
+            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.Contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
@@ -156,6 +166,7 @@
         private FontAwesome.Sharp.IconMenuItem menuNuevoUsuario;
         private FontAwesome.Sharp.IconMenuItem MenuPagos;
         private FontAwesome.Sharp.IconMenuItem MenuCuentas;
+        private System.Windows.Forms.Panel Contenedor;
     }
 }
 
