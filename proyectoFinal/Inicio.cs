@@ -8,10 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CapaEntidad;
+using FontAwesome.Sharp;
+
 namespace proyectoFinal
 {
     public partial class Inicio : Form
     {
+        private static IconMenuItem MenuActivo = null;
+        private static Form FormularioActivo = null;
         public Inicio()
         {
             InitializeComponent();
@@ -20,6 +25,21 @@ namespace proyectoFinal
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AbrirFormulario(IconMenuItem menu, Form formulario)
+        {
+            if (MenuActivo != null)
+            {
+                MenuActivo.BackColor = Color.White;
+            }
+            menu.BackColor = Color.Silver;
+            MenuActivo = menu;
+        }
+
+        private void menuNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new frmNuevoEstudiantes());
         }
     }
 }

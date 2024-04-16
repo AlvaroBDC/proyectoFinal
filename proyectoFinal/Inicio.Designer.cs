@@ -50,7 +50,7 @@
             this.menuReporte});
             this.menu.Location = new System.Drawing.Point(0, 53);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(684, 73);
+            this.menu.Size = new System.Drawing.Size(779, 73);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
@@ -66,6 +66,7 @@
             this.menuNuevoUsuario.Size = new System.Drawing.Size(122, 69);
             this.menuNuevoUsuario.Text = "Nuevos Usuarios";
             this.menuNuevoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuNuevoUsuario.Click += new System.EventHandler(this.menuNuevoUsuario_Click);
             // 
             // MenuPagos
             // 
@@ -113,7 +114,7 @@
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(684, 53);
+            this.menuTitulo.Size = new System.Drawing.Size(779, 53);
             this.menuTitulo.TabIndex = 1;
             this.menuTitulo.Text = "menuStrip2";
             // 
@@ -135,7 +136,7 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 126);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(684, 335);
+            this.contenedor.Size = new System.Drawing.Size(779, 407);
             this.contenedor.TabIndex = 3;
             // 
             // btnSalir
@@ -163,7 +164,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.ClientSize = new System.Drawing.Size(779, 533);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.label1);
