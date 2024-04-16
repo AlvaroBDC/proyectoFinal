@@ -152,7 +152,7 @@
             this.btnSalir.IconColor = System.Drawing.Color.White;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 30;
-            this.btnSalir.Location = new System.Drawing.Point(566, 10);
+            this.btnSalir.Location = new System.Drawing.Point(676, 10);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(91, 37);
             this.btnSalir.TabIndex = 4;
