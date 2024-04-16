@@ -54,6 +54,11 @@
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboBusqueda = new System.Windows.Forms.ComboBox();
+            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -243,13 +248,13 @@
             this.Apellidos,
             this.Grado,
             this.Celular});
-            this.bgvData.Location = new System.Drawing.Point(267, 68);
+            this.bgvData.Location = new System.Drawing.Point(271, 86);
             this.bgvData.Name = "bgvData";
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.bgvData.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.bgvData.RowTemplate.Height = 28;
-            this.bgvData.Size = new System.Drawing.Size(571, 311);
+            this.bgvData.Size = new System.Drawing.Size(624, 319);
             this.bgvData.TabIndex = 15;
             // 
             // btnSeleccionar
@@ -280,7 +285,6 @@
             // 
             this.Grado.HeaderText = "Grado";
             this.Grado.Name = "Grado";
-            this.Grado.Width = 50;
             // 
             // Celular
             // 
@@ -290,11 +294,11 @@
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(267, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(571, 34);
+            this.label8.Size = new System.Drawing.Size(628, 57);
             this.label8.TabIndex = 16;
             this.label8.Text = "Lista de Estudiantes:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -307,12 +311,77 @@
             this.txtID.TabIndex = 17;
             this.txtID.Text = "0";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label9.Location = new System.Drawing.Point(624, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Buscar por:";
+            // 
+            // cboBusqueda
+            // 
+            this.cboBusqueda.FormattingEnabled = true;
+            this.cboBusqueda.Location = new System.Drawing.Point(530, 48);
+            this.cboBusqueda.Name = "cboBusqueda";
+            this.cboBusqueda.Size = new System.Drawing.Size(121, 21);
+            this.cboBusqueda.TabIndex = 19;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiar.IconSize = 16;
+            this.btnLimpiar.Location = new System.Drawing.Point(809, 51);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(61, 21);
+            this.btnLimpiar.TabIndex = 21;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.SearchDollar;
+            this.btnBuscar.IconColor = System.Drawing.Color.Black;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 16;
+            this.btnBuscar.Location = new System.Drawing.Point(809, 24);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(61, 21);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Location = new System.Drawing.Point(666, 49);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(114, 20);
+            this.txtBusqueda.TabIndex = 22;
+            // 
             // frmNuevoEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(866, 427);
+            this.ClientSize = new System.Drawing.Size(943, 427);
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.cboBusqueda);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.bgvData);
@@ -359,12 +428,17 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.DataGridView bgvData;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboBusqueda;
+        private FontAwesome.Sharp.IconButton btnLimpiar;
+        private FontAwesome.Sharp.IconButton btnBuscar;
+        private System.Windows.Forms.TextBox txtBusqueda;
     }
 }
