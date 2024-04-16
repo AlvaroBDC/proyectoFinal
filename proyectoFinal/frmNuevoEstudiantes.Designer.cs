@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,16 +45,16 @@
             this.btnRegistrar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
+            this.bgvData = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bgvData)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -180,6 +182,7 @@
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnEditar
             // 
@@ -221,31 +224,33 @@
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // bgvData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.bgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
             this.ID,
             this.Nombres,
             this.Apellidos,
             this.Grado,
             this.Celular});
-            this.dataGridView1.Location = new System.Drawing.Point(267, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(571, 311);
-            this.dataGridView1.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(267, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(571, 34);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Lista de Estudiantes:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bgvData.Location = new System.Drawing.Point(267, 68);
+            this.bgvData.Name = "bgvData";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.bgvData.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.bgvData.RowTemplate.Height = 28;
+            this.bgvData.Size = new System.Drawing.Size(571, 311);
+            this.bgvData.TabIndex = 15;
             // 
             // btnSeleccionar
             // 
@@ -283,13 +288,24 @@
             this.Celular.Name = "Celular";
             this.Celular.Width = 150;
             // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(267, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(571, 34);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Lista de Estudiantes:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(165, 58);
+            this.txtID.Location = new System.Drawing.Point(175, 58);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(40, 20);
+            this.txtID.Size = new System.Drawing.Size(30, 20);
             this.txtID.TabIndex = 17;
-            this.txtID.Visible = false;
+            this.txtID.Text = "0";
             // 
             // frmNuevoEstudiantes
             // 
@@ -299,7 +315,7 @@
             this.ClientSize = new System.Drawing.Size(866, 427);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.bgvData);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnRegistrar);
@@ -317,7 +333,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frmNuevoEstudiantes";
             this.Text = "frmEstudiantes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmNuevoEstudiantes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bgvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,7 +357,7 @@
         private FontAwesome.Sharp.IconButton btnRegistrar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnEliminar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView bgvData;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;

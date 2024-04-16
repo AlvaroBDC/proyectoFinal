@@ -16,5 +16,17 @@ namespace proyectoFinal
         {
             InitializeComponent();
         }
+
+        private void frmNuevoEstudiantes_Load(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
