@@ -20,9 +20,10 @@ namespace CapaDatos
             {
                 try
                 {
-                    string query = "select ID,Nombres,Apellidos,Grado,Celular from Estudiantes";
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("select ID,Nombres,Apellidos,Grado,Celular from Estudiantes");
 
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.CommandType = CommandType.Text;
 
                     oconexion.Open();
