@@ -26,7 +26,7 @@ namespace proyectoFinal
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            bgvData.Rows.Add(new object[] { "", txtID.Text, txtNombres.Text, txtApellidos.Text, txtGrado.Text, txtCelular.Text });
         }
     }
 }
