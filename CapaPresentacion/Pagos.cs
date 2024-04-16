@@ -15,4 +15,3 @@ namespace CapaEntidad
         public string Fecha { get; set; }
     }
 }
-}

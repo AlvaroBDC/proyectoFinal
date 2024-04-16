@@ -80,6 +80,7 @@
             this.MenuPagos.Size = new System.Drawing.Size(122, 69);
             this.MenuPagos.Text = "Pagos";
             this.MenuPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuPagos.Click += new System.EventHandler(this.MenuPagos_Click);
             // 
             // MenuCuentas
             // 
@@ -93,6 +94,7 @@
             this.MenuCuentas.Size = new System.Drawing.Size(122, 69);
             this.MenuCuentas.Text = "Cuentas";
             this.MenuCuentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuCuentas.Click += new System.EventHandler(this.MenuCuentas_Click);
             // 
             // menuReporte
             // 
@@ -106,6 +108,7 @@
             this.menuReporte.Size = new System.Drawing.Size(122, 69);
             this.menuReporte.Text = "Reporte";
             this.menuReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuReporte.Click += new System.EventHandler(this.menuReporte_Click);
             // 
             // menuTitulo
             // 
