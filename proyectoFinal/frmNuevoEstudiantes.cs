@@ -25,11 +25,11 @@ namespace proyectoFinal
         {
             foreach(DataGridViewColumn columna in bgvData.Columns)
             {
-                if (columna.Visible == true )
+                if (columna.Visible == true)
                 {
                     cboBusqueda.Items.Add(new OpcionCombo()
                     {
-                        Valor=columna.Name, Texto=columna.HeaderText
+                        Valor = columna.Name, Texto = columna.HeaderText
                     });
                 }
                 cboBusqueda.DisplayMember = "Texto";
@@ -44,7 +44,6 @@ namespace proyectoFinal
             {
                 bgvData.Rows.Add(new object[] {
                     "",
-                    item.ID,
                     item.ID,
                     item.Nombres,
                     item.Apellidos,
@@ -61,7 +60,6 @@ namespace proyectoFinal
         {
             bgvData.Rows.Add(new object[] { 
                 "", 
-                txtID.Text,
                 txtIDEstudiante.Text,
                 txtNombres.Text,
                 txtApellidos.Text,
@@ -73,8 +71,7 @@ namespace proyectoFinal
         }
         private void Limpiar()
         {
-            txtID.Text = "0";
-            txtIDEstudiante.Text = "";
+            txtIDEstudiante.Text = "0";
             txtNombres.Text = "";
             txtApellidos.Text = "";
             txtGrado.Text = "";
@@ -85,6 +82,28 @@ namespace proyectoFinal
         private void iconButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bgvData_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+
+        }
+
+        private void bgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (bgvData.Columns[e.ColumnIndex].Name == "btnSeleccionar")
+            {
+                int indice = e.RowIndex;
+
+                if(indice >= 0)
+                {
+                    txtIDEstudiante.Text = bgvData.Rows[indice].Cells["IDEstudiante"].Value.ToString();
+                    txtNombres.Text = bgvData.Rows[indice].Cells["Nombres"].Value.ToString();
+                    txtApellidos.Text = bgvData.Rows[indice].Cells["Apellidos"].Value.ToString();
+                    txtGrado.Text = bgvData.Rows[indice].Cells["Grado"].Value.ToString();
+                    txtCelular.Text = bgvData.Rows[indice].Cells["Celular"].Value.ToString();
+                }
+            }
         }
     }
 }
