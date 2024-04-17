@@ -71,6 +71,7 @@ namespace proyectoFinal
         }
         private void Limpiar()
         {
+            txtIndice.Text = "-1";
             txtIDEstudiante.Text = "0";
             txtNombres.Text = "";
             txtApellidos.Text = "";
@@ -97,6 +98,7 @@ namespace proyectoFinal
 
                 if(indice >= 0)
                 {
+                    txtIndice.Text = indice.ToString();
                     txtIDEstudiante.Text = bgvData.Rows[indice].Cells["IDEstudiante"].Value.ToString();
                     txtNombres.Text = bgvData.Rows[indice].Cells["Nombres"].Value.ToString();
                     txtApellidos.Text = bgvData.Rows[indice].Cells["Apellidos"].Value.ToString();
