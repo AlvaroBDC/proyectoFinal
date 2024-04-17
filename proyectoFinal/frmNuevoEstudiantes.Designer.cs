@@ -31,10 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtIDEstudiante = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtGrado = new System.Windows.Forms.TextBox();
@@ -53,7 +51,7 @@
             this.Grado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtIDEstudiante = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cboBusqueda = new System.Windows.Forms.ComboBox();
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
@@ -70,24 +68,14 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 427);
+            this.label1.Size = new System.Drawing.Size(239, 384);
             this.label1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Id Estudiante";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 116);
+            this.label3.Location = new System.Drawing.Point(8, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
@@ -97,36 +85,29 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(9, 166);
+            this.label4.Location = new System.Drawing.Point(8, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Apellidos";
             // 
-            // txtIDEstudiante
-            // 
-            this.txtIDEstudiante.Location = new System.Drawing.Point(12, 84);
-            this.txtIDEstudiante.Name = "txtIDEstudiante";
-            this.txtIDEstudiante.Size = new System.Drawing.Size(194, 20);
-            this.txtIDEstudiante.TabIndex = 4;
-            // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(12, 132);
+            this.txtNombres.Location = new System.Drawing.Point(11, 88);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(194, 20);
             this.txtNombres.TabIndex = 5;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(12, 182);
+            this.txtApellidos.Location = new System.Drawing.Point(11, 138);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(194, 20);
             this.txtApellidos.TabIndex = 6;
             // 
             // txtGrado
             // 
-            this.txtGrado.Location = new System.Drawing.Point(12, 233);
+            this.txtGrado.Location = new System.Drawing.Point(11, 189);
             this.txtGrado.Name = "txtGrado";
             this.txtGrado.Size = new System.Drawing.Size(194, 20);
             this.txtGrado.TabIndex = 8;
@@ -135,7 +116,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(9, 217);
+            this.label5.Location = new System.Drawing.Point(8, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 7;
@@ -143,7 +124,7 @@
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(12, 281);
+            this.txtCelular.Location = new System.Drawing.Point(11, 237);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(194, 20);
             this.txtCelular.TabIndex = 10;
@@ -152,7 +133,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 265);
+            this.label6.Location = new System.Drawing.Point(9, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 9;
@@ -179,7 +160,7 @@
             this.btnRegistrar.IconColor = System.Drawing.Color.White;
             this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegistrar.IconSize = 16;
-            this.btnRegistrar.Location = new System.Drawing.Point(12, 324);
+            this.btnRegistrar.Location = new System.Drawing.Point(11, 280);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(194, 23);
             this.btnRegistrar.TabIndex = 12;
@@ -200,7 +181,7 @@
             this.btnEditar.IconColor = System.Drawing.Color.White;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 16;
-            this.btnEditar.Location = new System.Drawing.Point(12, 353);
+            this.btnEditar.Location = new System.Drawing.Point(11, 309);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(194, 23);
             this.btnEditar.TabIndex = 13;
@@ -220,7 +201,7 @@
             this.btnEliminar.IconColor = System.Drawing.Color.White;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 16;
-            this.btnEliminar.Location = new System.Drawing.Point(12, 382);
+            this.btnEliminar.Location = new System.Drawing.Point(11, 338);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(194, 23);
             this.btnEliminar.TabIndex = 14;
@@ -254,8 +235,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.bgvData.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.bgvData.RowTemplate.Height = 28;
-            this.bgvData.Size = new System.Drawing.Size(624, 319);
+            this.bgvData.Size = new System.Drawing.Size(624, 275);
             this.bgvData.TabIndex = 15;
+            this.bgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bgvData_CellContentClick);
+            this.bgvData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.bgvData_CellPainting);
             // 
             // btnSeleccionar
             // 
@@ -265,7 +248,7 @@
             // 
             // ID
             // 
-            this.ID.HeaderText = "ID Estudiante";
+            this.ID.HeaderText = "IDEstudiante";
             this.ID.Name = "ID";
             this.ID.Visible = false;
             // 
@@ -303,13 +286,13 @@
             this.label8.Text = "Lista de Estudiantes:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtID
+            // txtIDEstudiante
             // 
-            this.txtID.Location = new System.Drawing.Point(175, 58);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(30, 20);
-            this.txtID.TabIndex = 17;
-            this.txtID.Text = "0";
+            this.txtIDEstudiante.Location = new System.Drawing.Point(175, 58);
+            this.txtIDEstudiante.Name = "txtIDEstudiante";
+            this.txtIDEstudiante.Size = new System.Drawing.Size(30, 20);
+            this.txtIDEstudiante.TabIndex = 17;
+            this.txtIDEstudiante.Text = "0";
             // 
             // label9
             // 
@@ -376,13 +359,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(943, 427);
+            this.ClientSize = new System.Drawing.Size(943, 384);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cboBusqueda);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtIDEstudiante);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.bgvData);
             this.Controls.Add(this.btnEliminar);
@@ -395,10 +378,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtNombres);
-            this.Controls.Add(this.txtIDEstudiante);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmNuevoEstudiantes";
             this.Text = "frmEstudiantes";
@@ -412,10 +393,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIDEstudiante;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtGrado;
@@ -428,17 +407,17 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.DataGridView bgvData;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtIDEstudiante;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboBusqueda;
+        private FontAwesome.Sharp.IconButton btnLimpiar;
+        private FontAwesome.Sharp.IconButton btnBuscar;
+        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cboBusqueda;
-        private FontAwesome.Sharp.IconButton btnLimpiar;
-        private FontAwesome.Sharp.IconButton btnBuscar;
-        private System.Windows.Forms.TextBox txtBusqueda;
     }
 }
