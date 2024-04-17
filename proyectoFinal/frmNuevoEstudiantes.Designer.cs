@@ -296,9 +296,9 @@
             // 
             this.label8.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(267, 21);
+            this.label8.Location = new System.Drawing.Point(271, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(628, 57);
+            this.label8.Size = new System.Drawing.Size(624, 57);
             this.label8.TabIndex = 16;
             this.label8.Text = "Lista de Estudiantes:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

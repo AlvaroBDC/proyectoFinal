@@ -37,6 +37,23 @@ namespace proyectoFinal
                 cboBusqueda.SelectedIndex = 0;
             }
 
+            //Mostrar todos los usuarios
+            List<Estudiantes> listarEstudiantes = new CO_Estudiantes().listar();
+
+            foreach (Estudiantes item in listarEstudiantes)
+            {
+                bgvData.Rows.Add(new object[] {
+                    "",
+                    item.ID,
+                    item.ID,
+                    item.Nombres,
+                    item.Apellidos,
+                    item.Grado,
+                    item.Celular
+                    
+                });
+            }
+
 
         }
 
