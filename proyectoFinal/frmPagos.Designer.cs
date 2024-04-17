@@ -80,8 +80,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(564, 84);
@@ -110,7 +110,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 50);
+            this.textBox1.Location = new System.Drawing.Point(221, 49);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(194, 26);
             this.textBox1.TabIndex = 2;
@@ -118,7 +118,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 30);
+            this.label3.Location = new System.Drawing.Point(217, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 0;
@@ -158,15 +158,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(244, 30);
+            this.label5.Location = new System.Drawing.Point(6, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 20);
+            this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Numero Documento:";
+            this.label5.Text = "Monto:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(248, 52);
+            this.textBox2.Location = new System.Drawing.Point(10, 48);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(181, 26);
             this.textBox2.TabIndex = 4;
